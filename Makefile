@@ -26,8 +26,13 @@ ALL_COLORS_OUT := $(patsubst ./schemes/%.vim,./output/%.jcf,$(ALL_COLORS_IN))
 prod: $(PROD_COLORS_OUT)
 all: $(ALL_COLORS_OUT)
 
+clean:
+	rm -rf ./output/*.jcf
+
 install: 
-	cp ./output/*.jcf /home/jj/src/joe/inst/share/joe/colors
+	rm ~/src/joe/inst/share/joe/colors/*
+	cp ./output/*.jcf ~/src/joe/inst/share/joe/colors
+	cp ./custom/*.jcf ~/src/joe/inst/share/joe/colors
 
 output/%.jcf : schemes/%.vim
 	python3 convertvim.py $< > $@
