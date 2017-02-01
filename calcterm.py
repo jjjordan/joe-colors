@@ -1,8 +1,10 @@
 import common
 
+from common import xterm, cterm
+
 def match_colors(left, right):
     def gen_map(primary, secondary):
-        return {c: sorted(secondary, key=lambda x: common.colordiff(c, x)) for x in primary}
+        return {c: sorted(secondary, key=lambda x: common.colordiff(c, x)) for c in primary}
     
     leftresult, rightresult = common.matchmaker(gen_map(left, right), gen_map(right, left))
     return {c: v[0] if len(leftresult) > 0 else None for c, v in leftresult.items()}
@@ -18,16 +20,16 @@ def load_term(text, background, colors):
     if text in scolors: scolors.remove(text)
     if background in scolors: scolors.remove(background)
     
-    if islight > isdark:
+    if islight < isdark:
         del tcolors[0]
     else:
         del tcolors[0]
         del tcolors[7]
     
     match_result = match_colors(tcolors, scolors)
-    mresult = [match_result[c][0] if len(match_result[c]) > 0 else None for c in tcolors]
+    mresult = [match_result[c] for c in tcolors if c in match_result]
     
-    if islight > isdark:
+    if islight < isdark:
         mresult.insert(0, text)
     else:
         mresult.insert(0, background)

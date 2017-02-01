@@ -2,14 +2,15 @@
 import vimreader
 
 from common import closeColor256, cterm, xterm
+from calcterm import load_term
 
 def main(me, infile):
     with open(infile, 'r') as f:
         defs, links = vimreader.readFile(f)
     
     # 256 colors
-    writeout("256", do256(defs), links)
-    writeout("*", doGui(defs), links)
+    writeout("256", defs, cvt256, links)
+    writeout("*", defs, cvtGui, links)
     return True
 
 CONVERT = {
@@ -67,12 +68,31 @@ ORDER = [
     "",
 ]
 
-def writeout(title, colors, links):
+def writeout(title, defs, convert, links):
     print(".colors " + title)
     print()
     
+    # Convert defs into colors.  Collect colors so we can
+    # calculate terminal colors
+    colors = {}
+    allcolors = set()
+    tcolreverse = {}
     outputs = {}
-    loc_colors = {k: v for k, v in colors}
+    
+    for n, c in defs.items():
+        fg, bg = convert(c)
+        colors[n] = tocol(fg, bg) + attrs(c)
+        for c in (fg, bg):
+            if c is not None:
+                guic = toGuiColor(c)
+                tcolreverse[guic] = c
+                allcolors.add(guic)
+    
+    # Calculate terminal colors
+    text_fg, text_bg = convert(defs['normal'])
+    for i, c in enumerate(load_term(toGuiColor(text_fg), toGuiColor(text_bg), list(allcolors))):
+        outputs['-term %d' % i] = tcolreverse[c]
+    
     loc_links = {k: v for k, v in links}
     
     # Pull in attributes from links; either propagate or generate a link in the output
@@ -90,11 +110,11 @@ def writeout(title, colors, links):
             while t in links and loc_links[t]:
                 t = loc_links[t].link
             
-            if t in loc_colors:
-                loc_colors[src] = loc_colors[t]
+            if t in colors:
+                colors[src] = colors[t]
     
     another = False
-    for n, c in loc_colors.items():
+    for n, c in colors.items():
         if n in CONVERT:
             for k in CONVERT[n]:
                 outputs[k] = c
@@ -130,29 +150,32 @@ def writeout(title, colors, links):
     
     print()
 
-def do256(colors):
-    result = []
-    for n, c in colors.items():
-        if (c.cfg is not None and c.cfg > 15) or (c.cbg is not None and c.cbg > 15):
-            # Cterm has good stuff here
-            result.append((n, tocol(best256(c.cfg), best256(c.cbg)) + attrs(c)))
-        elif c.fg is not None or c.bg is not None:
-            result.append((n, tocol(closeColor256(c.fg), closeColor256(c.bg)) + attrs(c)))
-    
-    return result
+def parts(cdef):
+    return {
+        'fg': cdef.fg,
+        'bg': cdef.bg,
+        'cfg': cdef.cfg,
+        'cbg': cdef.cbg,
+        'bold': cdef.bold,
+        'italic': cdef.italic,
+        'underline': cdef.underline
+    }
 
-def doGui(colors):
-    result = []
-    for n, c in colors.items():
-        def pick(gui, ctc):
-            if gui is not None:
-                return gui
-            if ctc is not None:
-                return cterm[ctc]
-        
-        result.append((n, tocol(pick(c.fg, c.cfg), pick(c.bg, c.cbg)) + attrs(c)))
-    
-    return result
+def cvt256(color):
+    if (color.cfg is not None and color.cfg > 15) or (color.cbg is not None and color.cbg > 15):
+        return best256(color.cfg), best256(color.cbg)
+    elif color.fg is not None or color.bg is not None:
+        return closeColor256(color.fg), closeColor256(color.bg)
+    else:
+        return None, None
+
+def cvtGui(color):
+    def pick(gui, ctc):
+        if gui is not None:
+            return gui
+        if ctc is not None:
+            return cterm[ctc]
+    return pick(color.fg, color.cfg), pick(color.bg, color.cbg)
 
 def tocol(fg, bg):
     result = ""
@@ -168,6 +191,14 @@ def best256(color):
     if color > 15:
         return color
     return closeColor256(xterm[color])
+
+def toGuiColor(color):
+    if isinstance(color, int):
+        return cterm[color]
+    elif isinstance(color, str):
+        return color
+    else:
+        return None
 
 def attrs(cdef):
     result = ""

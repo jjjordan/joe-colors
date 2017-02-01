@@ -57,17 +57,24 @@ def matchmaker(left, right):
         # Morning
         balconies = {k: [] for k in left}
         for c in right:
-            if len(rightlist[c]) > 0:
-                balconies[rightlist[c][0]].append(c)
+            if len(right[c]) > 0:
+                balconies[right[c][0]].append(c)
         
         # Afternoon/evening
         changes = False
         for c in left:
             if len(balconies[c]) > 1:
-                place = {suitor: idx for idx, suitor in iter(balconies[c])}
+                place = {suitor: idx for idx, suitor in enumerate(balconies[c])}
                 balconies[c].sort(key=lambda x: place[x])
                 for loser in balconies[c][1:]:
-                    del rightlist[loser][0]
+                    del right[loser][0]
                     changes = True
+    
+    balconies = {k: [] for k in left}
+    for c in right:
+        if len(right[c]) > 0:
+            balconies[right[c][0]].append(c)
+    
+    tres = {k: balconies[k][0] for k in balconies if len(balconies[k]) > 0}
     
     return left, right

@@ -1,4 +1,15 @@
 
+def parts(cdef):
+    return {
+        'fg': cdef.fg,
+        'bg': cdef.bg,
+        'cfg': cdef.cfg,
+        'cbg': cdef.cbg,
+        'bold': cdef.bold,
+        'italic': cdef.italic,
+        'underline': cdef.underline
+    }
+
 class ColorDef:
     def __init__(this, fg, bg, cfg, cbg, bold, italic, underline, guiColors = True):
         this.fg = fg
@@ -61,8 +72,9 @@ def regroup(colors):
             for a in ('fg', 'bg', 'cfg', 'cbg', 'bold', 'italic', 'underline'):
                 for d in c:
                     if getattr(d, a):
-                        defr[a] = getattr(d, a)
-                    else:
+                        if (a not in defr) or defr[a] is None or d.guiColors:
+                            defr[a] = getattr(d, a)
+                    elif a not in defr:
                         defr[a] = None
             result[n.lower()] = ColorDef(**defr)
         else:
@@ -180,6 +192,11 @@ def parseColor(line):
                 cbg = v
 
     guiColors = (fg or bg) and True
+
+    if cfg and cfg.lower() == 'none':
+        cfg = None
+    if cbg and cbg.lower() == 'none':
+        cbg = None
     
     if fg is None and cfg is not None:
         fg = parseCterm(cfg)
