@@ -141,7 +141,7 @@ def parseColor(line):
         return None
     
     if pieces[1].lower() == 'link':
-        return pieces[2], ColorLink(pieces[3])
+        return pieces[2].lower(), ColorLink(pieces[3].lower())
     
     if pieces[1].lower() == 'clear':
         return None

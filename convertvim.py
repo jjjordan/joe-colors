@@ -8,8 +8,8 @@ def main(me, infile):
         defs, links = vimreader.readFile(f)
     
     # 256 colors
-    writeout("256", do256(defs))
-    writeout("*", doGui(defs))
+    writeout("256", do256(defs), links)
+    writeout("*", doGui(defs), links)
     return True
 
 CONVERT = {
@@ -60,26 +60,52 @@ CONVERT = {
 ORDER = [
     "-text", "-status", "-selection", "-linum", "-curlin", "-curlinum", "-menusel", "-cursor",
     "",
+    "-term 0", "-term 1", "-term 2", "-term 3", "-term 4", "-term 5", "-term 6", "-term 7",
+    "-term 8", "-term 9", "-term 10", "-term 11", "-term 12", "-term 13", "-term 14", "-term 15",
+    "",
     ["=Idle"], "=Keyword", "=Operator", "=Type",
     "",
 ]
 
-def writeout(title, lst):
+def writeout(title, colors, links):
     print(".colors " + title)
     print()
     
-    another = False
     outputs = {}
-    for n, c in lst:
+    loc_colors = {k: v for k, v in colors}
+    loc_links = {k: v for k, v in links}
+    
+    # Pull in attributes from links; either propagate or generate a link in the output
+    for src, tgt in loc_links.items():
+        if src in CONVERT:
+            if tgt.link in CONVERT:
+                s = next(filter(lambda x: x.startswith('='), CONVERT[src]), None)
+                t = next(filter(lambda x: x.startswith('='), CONVERT[tgt.link]), None)
+                if s and t:
+                    # We can generate a link
+                    outputs[s] = '+' + t.lstrip('=')
+                    continue
+            
+            t = tgt.link
+            while t in links and loc_links[t]:
+                t = loc_links[t].link
+            
+            if t in loc_colors:
+                loc_colors[src] = loc_colors[t]
+    
+    another = False
+    for n, c in loc_colors.items():
         if n in CONVERT:
             for k in CONVERT[n]:
                 outputs[k] = c
         else:
-            print("# Dropped: %s %s" % (n, c))
-            another = True
+            pass
+            #print("# Dropped: %s %s" % (n, c))
+            #another = True
     
     if another: print()
     
+    # Print out stuff in order
     for o in ORDER:
         if o == "":
             print()

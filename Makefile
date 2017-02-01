@@ -34,5 +34,5 @@ install:
 	cp ./output/*.jcf ~/src/joe/inst/share/joe/colors
 	cp ./custom/*.jcf ~/src/joe/inst/share/joe/colors
 
-output/%.jcf : schemes/%.vim
+output/%.jcf : schemes/%.vim *.py
 	python3 convertvim.py $< > $@
