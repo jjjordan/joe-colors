@@ -1,5 +1,5 @@
 
-PROD_COLORS := ir_black molokai oceandeep wombat xoria256 zenburn
+PROD_COLORS := ir_black molokai wombat xoria256 zenburn
 PROD_COLORS_IN := $(patsubst %,./schemes/%.vim,$(PROD_COLORS))
 PROD_COLORS_OUT := $(patsubst %,./output/%.jcf,$(PROD_COLORS))
 
