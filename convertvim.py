@@ -91,7 +91,11 @@ def writeout(title, defs, convert, links):
     # Calculate terminal colors
     text_fg, text_bg = convert(defs['normal'])
     for i, c in enumerate(load_term(toGuiColor(text_fg), toGuiColor(text_bg), list(allcolors))):
-        outputs['-term %d' % i] = tcolreverse[c]
+        outcolor = tcolreverse[c]
+        if isinstance(outcolor, str):
+            outputs['-term %d' % i] = '$' + outcolor.lstrip('#$').upper()
+        else:
+            outputs['-term %d' % i] = outcolor
     
     loc_links = {k: v for k, v in links}
     
