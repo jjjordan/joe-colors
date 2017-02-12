@@ -9,8 +9,8 @@ def main(me, infile):
         defs, links = vimreader.readFile(f)
     
     # 256 colors
-    writeout("256", defs, cvt256, links)
-    writeout("*", defs, cvtGui, links)
+    writeout("256", assignColors(defs, cvt256, links))
+    writeout("*", assignColors(defs, cvtGui, links))
     return True
 
 CONVERT = {
@@ -68,10 +68,7 @@ ORDER = [
     "",
 ]
 
-def writeout(title, defs, convert, links):
-    print(".colors " + title)
-    print()
-    
+def assignColors(defs, convert, links):
     # Convert defs into colors.  Collect colors so we can
     # calculate terminal colors
     colors = {}
@@ -117,17 +114,18 @@ def writeout(title, defs, convert, links):
             if t in colors:
                 colors[src] = colors[t]
     
-    another = False
     for n, c in colors.items():
         if n in CONVERT:
             for k in CONVERT[n]:
                 outputs[k] = c
         else:
             pass
-            #print("# Dropped: %s %s" % (n, c))
-            #another = True
     
-    if another: print()
+    return outputs
+
+def writeout(title, outputs):
+    print(".colors " + title)
+    print()
     
     # Print out stuff in order
     for o in ORDER:
