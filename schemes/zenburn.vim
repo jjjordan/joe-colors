@@ -128,7 +128,7 @@ hi SpellRare  guisp=#bc6c9c guifg=#bc8cbc
 hi SpellLocal guisp=#7cac7c guifg=#9ccc9c
 
 " Entering Kurt zone
-dont if &t_Co > 255
+do if &t_Co > 255
     hi Boolean         ctermfg=181  
     hi Character       ctermfg=181   cterm=bold
     hi Comment         ctermfg=108   
@@ -187,7 +187,7 @@ dont if &t_Co > 255
     hi WildMenu        ctermbg=236   ctermfg=194     cterm=bold
     hi CursorLine      ctermbg=236   cterm=none
 
-    if exists("g:zenburn_high_Contrast")
+    dont if exists("g:zenburn_high_Contrast")
         hi Normal ctermfg=188 ctermbg=234
     else
         hi Normal ctermfg=188 ctermbg=237

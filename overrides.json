@@ -1,0 +1,41 @@
+{
+    "ir_black": {
+        "copy": [
+            "Based on ir_black vim scheme",
+            "More at: http://blog.infinitered.com/entries/show/8"
+        ],
+        "options": [],
+        "term": ["#4E4E4E", "#FF6C60", "#A8FF60", "#FFFFB6", "#96CBFE", "#FF73FD", "#C6C5FE", "#EEEEEE",
+                 "#7C7C7C", "#FFB6B0", "#CEFFAB", "#FFFFCB", "#FFFFCB", "#FF9CFE", "#DFDFFE", "#FFFFFF"]
+    },
+    "molokai": {
+        "copy": [
+            "Based on Molokai vim scheme by Tomas Restrepo <tomas@winterdom.com>",
+            "Which was in turn based on the monokai theme for textmate by Wimer Hazenberg"
+        ]
+    },
+    "wombat": {
+        "copy": [
+            "Based on Wombat vim scheme by Lars H. Nielsen <dengmao@gmail.com>"
+        ]
+    },
+    "xoria256": {
+        "copy": [
+            "Based on xoria256 vim scheme by Dmitriy Y. Zotikov (xio) <xio@ungrund.org>"
+        ],
+        "options": ["strict256"]
+    },
+    "zenburn": {
+        "copy": [
+            "Based on Zenburn vim scheme by Jani Nurminen <slinky@iki.fi>"
+        ],
+        "options": ["fromgui"],
+        "colors256": {
+            "-status": "236/186",
+            "=Statement": "187",
+            "=diff.AddLine": "66 bold",
+            "=diff.ChgLine": "/236 bold",
+            "=diff.DelLine": "236/238"
+        }
+    }
+}

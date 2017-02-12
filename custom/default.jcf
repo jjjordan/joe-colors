@@ -3,6 +3,8 @@
 
 -selection 	default/default inverse
 -menusel 	default/default inverse
+-linum		BLACK
+-curlinum	default
 
 =Idle
 =Bad            bold red

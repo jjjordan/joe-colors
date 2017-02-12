@@ -1,4 +1,6 @@
 
+import json
+import os.path
 import vimreader
 
 from common import closeColor256, cterm, xterm
@@ -8,9 +10,35 @@ def main(me, infile):
     with open(infile, 'r') as f:
         defs, links = vimreader.readFile(f)
     
-    # 256 colors
-    writeout("256", assignColors(defs, cvt256, links))
-    writeout("*", assignColors(defs, cvtGui, links))
+    options = loadOverrides(infile)
+    
+    # Copyright output
+    print()
+    if options['copy']:
+        for ln in options['copy']:
+            print("# " + ln)
+        print()
+    
+    # Overrides
+    applyOverrides(options['overrides'])
+    
+    if 'no256' not in options['options']:
+        if 'strict256' in options['options']:
+            cols = assignColors(defs, take256, links)
+        elif 'fromgui' in options['options']:
+            cols = assignColors(defs, takegui256, links)
+        else:
+            cols = assignColors(defs, cvt256, links)
+        
+        cols.update(options['colors256'])
+        applyTerm(cols, options['term256'] or options['term'], gui=False)
+        writeout("256", cols)
+    
+    cols = assignColors(defs, cvtGui, links)
+    cols.update(options['colorsgui'])
+    applyTerm(cols, options['term'], gui=True)
+    writeout("*", cols)
+    
     return True
 
 CONVERT = {
@@ -164,9 +192,24 @@ def parts(cdef):
     }
 
 def cvt256(color):
+    """Take 256 color if it's an extended color, otherwise convert from GUI"""
     if (color.cfg is not None and color.cfg > 15) or (color.cbg is not None and color.cbg > 15):
         return best256(color.cfg), best256(color.cbg)
     elif color.fg is not None or color.bg is not None:
+        return closeColor256(color.fg), closeColor256(color.bg)
+    else:
+        return None, None
+
+def take256(color):
+    """Take 256 color only"""
+    if color.cfg is not None or color.cbg is not None:
+        return best256(color.cfg), best256(color.cbg)
+    else:
+        return None, None
+
+def takegui256(color):
+    """Convert GUI color to 256"""
+    if color.fg is not None or color.bg is not None:
         return closeColor256(color.fg), closeColor256(color.bg)
     else:
         return None, None
@@ -224,6 +267,53 @@ def fmtcolor(c):
         return '$' + c[1:]
     else:
         return c
+
+def applyOverrides(overrides):
+    for k, v in overrides.items():
+        # Remove v from CONVERT
+        for item in v:
+            for ck, cv in CONVERT.items():
+                if item in cv:
+                    cv.remove(item)
+        # Add k->v to CONVERT
+        if k in CONVERT:
+            CONVERT[k].extend(v)
+        else:
+            CONVERT[k] = v
+
+def applyTerm(colors, termcolors, gui=True):
+    for i in range(len(termcolors)):
+        col = termcolors[i]
+        if isinstance(col, int) and gui:
+            col = '$' + cterm[col].lstrip('#')
+        elif isinstance(col, str) and not gui:
+            col = closeColor256(col)
+        else:
+            col = str(col)
+        
+        colors['-term %d' % i] = col
+
+def loadOverrides(fname):
+    with open("overrides.json", "r") as f:
+        all_opts = json.load(f)
+    name, ext = os.path.splitext(os.path.basename(fname))
+    options = all_opts[name] if name in all_opts else {}
+    
+    dflt = {
+        'options': [],
+        'copy': [],
+        'overrides': {},
+        'colors256': {},
+        'colorsgui': {},
+        'term': [],
+        'term256': []
+    }
+    
+    for k, v in dflt.items():
+        if k not in options:
+            options[k] = v
+    
+    return options
 
 if __name__ == '__main__':
     import sys
