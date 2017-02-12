@@ -83,20 +83,20 @@ def regroup(colors):
     return result
 
 def postProcess(dict):
-    normfg = None
-    normbg = None
-    if 'normal' in dict:
-        x = dict['normal']
-        if x.fg is not None:
-            normfg = x.fg
-        if x.bg is not None:
-            normbg = x.bg
+    normal = dict['normal'] if 'normal' in dict else ColorDef(None, None, None, None, False, False, False)
     
     for cdef in dict.values():
-        if cdef.fg == 'fg':   cdef.fg = normfg
-        elif cdef.fg == 'bg': cdef.fg = normbg
-        if cdef.bg == 'fg':   cdef.bg = normfg
-        elif cdef.bg == 'bg': cdef.bg = normbg
+        for prop in ('fg', 'bg', 'cfg', 'cbg'):
+            if getattr(cdef, prop) == 'fg':
+                setattr(cdef, prop, normal.cfg if prop.startswith('c') else normal.fg)
+            elif getattr(cdef, prop) == 'bg':
+                setattr(cdef, prop, normal.cbg if prop.startswith('c') else normal.bg)
+        
+        if cdef is not normal:
+            if cdef.fg == normal.fg:   cdef.fg = None
+            if cdef.bg == normal.bg:   cdef.bg = None
+            if cdef.cfg == normal.cfg: cdef.cfg = None
+            if cdef.cbg == normal.cbg: cdef.cbg = None
         
         if isinstance(cdef.cfg, str):
             if cdef.cfg in ctermNames:
@@ -116,15 +116,15 @@ def postProcess(dict):
                     cdef.cbg = None
     
     if 'cursor' not in dict:
-        cursor = ColorDef(fg=normbg, bg=normfg, bold=False, italic=False, underline=False, cfg=None, cbg=None)
+        cursor = ColorDef(fg=normal.bg, bg=normal.fg, bold=False, italic=False, underline=False, cfg=normal.cbg, cbg=normal.cfg)
         dict['cursor'] = cursor
     else:
         cursor = dict['cursor']
     
     if cursor.fg is None:
-        cursor.fg = normbg
+        cursor.fg = normal.bg
     if cursor.bg is None:
-        cursor.bg = normfg
+        cursor.bg = normal.fg
     
     return dict
 
@@ -190,9 +190,9 @@ def parseColor(line):
                 cfg = v
             elif k == 'ctermbg':
                 cbg = v
-
+    
     guiColors = (fg or bg) and True
-
+    
     if cfg and cfg.lower() == 'none':
         cfg = None
     if cbg and cbg.lower() == 'none':

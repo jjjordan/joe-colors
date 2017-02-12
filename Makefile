@@ -26,6 +26,10 @@ ALL_COLORS_OUT := $(patsubst ./schemes/%.vim,./output/%.jcf,$(ALL_COLORS_IN))
 prod: $(PROD_COLORS_OUT)
 all: $(ALL_COLORS_OUT)
 
+venv: requirements.txt
+	python3 -m venv venv
+	venv/bin/pip install -r requirements.txt
+
 clean:
 	rm -rf ./output/*.jcf
 
@@ -34,5 +38,5 @@ install:
 	cp ./output/*.jcf ~/src/joe/inst/share/joe/colors
 	cp ./custom/*.jcf ~/src/joe/inst/share/joe/colors
 
-output/%.jcf : schemes/%.vim *.py
-	python3 convertvim.py $< > $@
+output/%.jcf : schemes/%.vim *.py venv
+	venv/bin/python3 convertvim.py $< > $@

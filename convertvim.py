@@ -19,6 +19,7 @@ CONVERT = {
     "statusline":	["-status"],
     "cursorline":	["-curlin"],
     "linenr":		["-linum"],
+    "cursorlinenr":	["-curlinum"],
     "pmenusel":		["-menusel"],
     "cursor":		["-cursor"],
     
@@ -33,29 +34,28 @@ CONVERT = {
     "identifier":	["=DefinedIdent"],
     "function":		["=DefinedFunction"],
     "statement":	["=Statement"],
-    # Conditional
+    "conditional":	["=Conditional"],
+    "repeat":		["=Loop"],
+    "label":		["=Label"],
     # Exception
-    # Repeat
-    # Label
     "operator":		["=Operator"],
     "keyword":		["=Keyword"],
     "preproc":		["=Preproc"],
     "include":		["=IncSystem"],
-    # Define
-    # Macro
-    # PreCondit
+    "precondit":	["=Precond"],
+    "define":		["=Define"],
+    "macro":		["=Macro"],
     "type":		["=Type"],
-    # StorageClass
-    # Structure
+    "storageclass":	["=StorageClass"],
+    "structure":	["=Structure"],
     "special":		["=Escape"],
     "specialchar":	["=StringEscape"],
     "error":		["=Bad"],
     "todo":		["=TODO"],
     
     "diffadd":		["=diff.AddLine"],
-    "diffchange":	["=diff.ChangeLine"],
-    "diffdelete":	["=diff.DelLine"],
-    "difftext":		["=diff.Text"],
+    "diffchange":	["=diff.ChgLine"],
+    "diffdelete":	["=diff.DelLine"]
 }
 
 ORDER = [
