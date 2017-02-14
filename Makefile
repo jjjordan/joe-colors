@@ -6,7 +6,6 @@ PROD_COLORS_OUT := $(patsubst %,./output/%.jcf,$(PROD_COLORS))
 ALL_COLORS_IN := $(wildcard ./schemes/*.vim)
 ALL_COLORS_OUT := $(patsubst ./schemes/%.vim,./output/%.jcf,$(ALL_COLORS_IN))
 
-
 # Considering
 #   darkspectrum, freya, inkpot, lucius, moria-light
 # Fringe
@@ -16,12 +15,6 @@ ALL_COLORS_OUT := $(patsubst ./schemes/%.vim,./output/%.jcf,$(ALL_COLORS_IN))
 #
 # Consider in the future:
 #   tender, papercolor-light, dracula, base16, twilight, seoul256, desertink
-
-#dbg:
-#	sh -c "echo $(PROD_COLORS_OUT)"
-#	sh -c "echo $(PROD_COLORS_IN)"
-#	sh -c "echo $(ALL_COLORS_OUT)"
-#	sh -c "echo $(ALL_COLORS_IN)"
 
 prod: $(PROD_COLORS_OUT)
 all: $(ALL_COLORS_OUT)
@@ -38,8 +31,6 @@ install:
 	cp ./output/*.jcf ~/src/joe/inst/share/joe/colors
 	cp ./custom/*.jcf ~/src/joe/inst/share/joe/colors
 
-output/%.jcf : schemes/%.vim *.py venv overrides.json output
-	venv/bin/python3 convertvim.py $< > $@
-
-output:
+output/%.jcf : schemes/%.vim *.py venv overrides.json
 	mkdir -p output
+	venv/bin/python3 convertvim.py $< > $@

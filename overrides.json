@@ -1,4 +1,12 @@
 {
+    "darkblue2": {
+        "copy": ["Based on darkblue2 vim scheme by Datila Carvalho <datila@hotmail.com>"],
+        "options": ["no256"]
+    },
+    "desert": {
+        "copy": ["Based on desert vim scheme by Hans Fugal <hans@fugal.net>"],
+        "options": ["no256"]
+    },
     "ir_black": {
         "copy": [
             "Based on ir_black vim scheme",

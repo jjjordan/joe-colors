@@ -288,6 +288,8 @@ def applyTerm(colors, termcolors, gui=True):
             col = '$' + cterm[col].lstrip('#')
         elif isinstance(col, str) and not gui:
             col = closeColor256(col)
+        elif isinstance(col, str):
+            col = '$' + col.lstrip('#')
         else:
             col = str(col)
         
