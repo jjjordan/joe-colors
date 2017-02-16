@@ -1,6 +1,6 @@
 import colormath
 
-from colormath.color_objects import sRGBColor, LabColor
+from colormath.color_objects import sRGBColor, LabColor, HSLColor
 from colormath.color_conversions import convert_color
 from colormath.color_diff import delta_e_cie2000
 
@@ -8,13 +8,17 @@ diff_cache = {}
 def colordiff(x, y):
     if (x.lower(), y.lower()) in diff_cache:
         return diff_cache[(x.lower(), y.lower())]
-    def parsergb(rgb):
-        rgb = rgb.lstrip('#')
-        return sRGBColor(int(rgb[0:2], 16) / 256, int(rgb[2:4], 16) / 256, int(rgb[4:6], 16) / 256)
-    result = delta_e_cie2000(convert_color(parsergb(x), LabColor), convert_color(parsergb(y), LabColor))
+    result = delta_e_cie2000(convert_color(read_rgb(x), LabColor), convert_color(read_rgb(y), LabColor))
     diff_cache[(x.lower(), y.lower())] = result
     diff_cache[(y.lower(), x.lower())] = result
     return result
+
+def read_rgb(rgb):
+    rgb = rgb.lstrip('#').lstrip('$')
+    return sRGBColor(int(rgb[0:2], 16) / 256, int(rgb[2:4], 16) / 256, int(rgb[4:6], 16) / 256)
+
+def rgb2hsl(rgb):
+    return convert_color(read_rgb(rgb), HSLColor)
 
 xterm = ['#000000', '#cd0000', '#00cd00', '#cdcd00', '#0000ee', '#cd00cd', '#00cdcd', '#e5e5e5',
          '#777777', '#ff0000', '#00ff00', '#ffff00', '#5c5cff', '#ff00ff', '#00ffff', '#ffffff']
