@@ -26,11 +26,10 @@ venv: requirements.txt
 clean:
 	rm -rf ./output/*.jcf
 
-install: 
-	rm ~/src/joe/inst/share/joe/colors/*
-	cp ./output/*.jcf ~/src/joe/inst/share/joe/colors
-	cp ./custom/*.jcf ~/src/joe/inst/share/joe/colors
+install: prod
+	mkdir -p ${HOME}/.joe/colors
+	cp ./output/*.jcf ${HOME}/.joe/colors
+	cp ./custom/*.jcf ${HOME}/.joe/colors
 
 output/%.jcf : schemes/%.vim *.py venv overrides.json
-	mkdir -p output
-	venv/bin/python3 convertvim.py $< > $@
+	venv/bin/python3 convertvim.py $< -o $@

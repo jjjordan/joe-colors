@@ -6,38 +6,53 @@ import vimreader
 from common import closeColor256, cterm, xterm
 from calcterm import load_term
 
-def main(me, infile):
+def main(infile, outfile):
     with open(infile, 'r') as f:
         defs, links = vimreader.readFile(f)
     
     options = loadOverrides(infile)
     
-    # Copyright output
-    print()
-    if options['copy']:
-        for ln in options['copy']:
-            print("# " + ln)
-        print()
+    if 'skip' in options['options']:
+        return True
     
     # Overrides
     applyOverrides(options['overrides'])
     
+    cols256 = colsGUI = None
+    
     if 'no256' not in options['options']:
         if 'strict256' in options['options']:
-            cols = assignColors(defs, take256, links)
+            cols256 = assignColors(defs, take256, links)
         elif 'fromgui' in options['options']:
-            cols = assignColors(defs, takegui256, links)
+            cols256 = assignColors(defs, takegui256, links)
         else:
-            cols = assignColors(defs, cvt256, links)
+            cols256 = assignColors(defs, cvt256, links)
         
-        cols.update(options['colors256'])
-        applyTerm(cols, options['term256'] or options['term'], gui=False)
-        writeout("256", cols)
+        cols256.update(options['colors256'])
+        applyTerm(cols256, options['term256'] or options['term'], gui=False)
     
     cols = assignColors(defs, cvtGui, links)
     cols.update(options['colorsgui'])
     applyTerm(cols, options['term'], gui=True)
-    writeout("*", cols)
+    
+    if outfile is not None:
+        fout = open(outfile, 'w')
+    else:
+        fout = sys.stdout
+    
+    # Copyright/credits
+    try:
+        print(file=fout)
+        if options['copy']:
+            for ln in options['copy']:
+                print("# " + ln, file=fout)
+            print(file=fout)
+        
+        if cols256: writeout(fout, "256", cols256)
+        if colsGUI: writeout(fout, "*", colsGUI)
+    except:
+        if outfile is not None:
+            fout.close()
     
     return True
 
@@ -151,18 +166,18 @@ def assignColors(defs, convert, links):
     
     return outputs
 
-def writeout(title, outputs):
-    print(".colors " + title)
-    print()
+def writeout(f, title, outputs):
+    print(".colors " + title, file=f)
+    print(file=f)
     
     # Print out stuff in order
     for o in ORDER:
         if o == "":
-            print()
+            print(file=f)
         elif isinstance(o, list):
-            print(o[0])
+            print(o[0], file=f)
         elif o in outputs:
-            print("%s %s" % (o, outputs[o]))
+            print("%s %s" % (o, outputs[o]), file=f)
             del outputs[o]
     
     dbl = {}
@@ -172,13 +187,13 @@ def writeout(title, outputs):
             del outputs[k]
     
     for k in sorted(outputs.keys()):
-        print("%s %s" % (k, outputs[k]))
+        print("%s %s" % (k, outputs[k]), file=f)
     
-    print()
+    print(file=f)
     for k in sorted(dbl.keys()):
-        print("%s %s" % (k, dbl[k]))
+        print("%s %s" % (k, dbl[k]), file=f)
     
-    print()
+    print(file=f)
 
 def parts(cdef):
     return {
@@ -319,4 +334,11 @@ def loadOverrides(fname):
 
 if __name__ == '__main__':
     import sys
-    sys.exit(0 if main(*sys.argv) else 1)
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Convert vim color schemes to Joe's Own Editor color schemes")
+    parser.add_argument('infile', type=str, help="Input vim color scheme")
+    parser.add_argument('-o', '--outfile', type=str, nargs='?', help="Output file. If omitted, writes to stdout")
+    
+    args = parser.parse_args()
+    sys.exit(0 if main(args.infile, args.outfile) else 1)
