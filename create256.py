@@ -1,14 +1,16 @@
 
-import common
 import re
 import sys
+
+import common
+import jcffile
 
 def main(infiles):
     for infile in infiles:
         print("Processing %s... " % infile, end="")
         sys.stdout.flush()
-        jcf = loadJCF(infile)
-        guisect = next((sect for sect in jcf if sect.colors == '*'), None)
+        jcf = jcffile.JCFFile().load(infile)
+        guisect = jcf.getSection('*')
         
         if not guisect:
             print("No truecolor section, skipping.")
@@ -27,43 +29,28 @@ def main(infiles):
         for k, v in changes.items():
             newcontent = re.sub(r"\$" + k, v, newcontent, 0, re.I)
         
-        sect256 = next((sect for sect in jcf if sect.colors == '256'), None)
+        sect256 = jcf.getSection('256')
         if sect256 is not None:
             sect256.content = newcontent
         else:
             sect256 = Section("256")
             sect256.colorline = ".colors 256\n"
             sect256.content = newcontent
-            jcf.append(sect256)
+            jcf.addSection(sect256)
         
         print("Writing output... ", end="")
-        writeout(infile, jcf)
+        jcf.save(infile)
         print("Done.")
         
         print(checkDifferences(differences))
 
-def loadJCF(infile):
-    with open(infile, 'r') as f:
-        sections = [Section(None)]
-        lastSectionData = []
-        for line in f:
-            d = line.strip()
-            if d.startswith('.colors'):
-                colors = d[len('.colors'):].strip()
-                sect = Section(colors)
-                sections[-1].content = ''.join(lastSectionData)
-                sections.append(sect)
-                sect.colorline = line
-                lastSectionData = []
-            else:
-                lastSectionData.append(line)
-        sections[-1].content = ''.join(lastSectionData)
-
-        return sections
 
 def getDifference(c1, c2):
     hsl1, hsl2 = [common.rgb2hsl(c).get_value_tuple() for c in [c1, c2]]
-    return [common.colordiff(c1, c2)] + list(abs(hsl1[i] - hsl2[i]) for i in range(3))
+    hsldiff = [abs(x - y) for x, y in zip(hsl1, hsl2)]
+    # Fix hue diff, since it's in degrees
+    hsldiff[0] = min(hsldiff[0], 360 - hsldiff[0])
+    return [common.colordiff(c1, c2)] + hsldiff
 
 def checkDifferences(diffs):
     worst = [None, None, None, None]
@@ -76,21 +63,6 @@ def checkDifferences(diffs):
     
     return "\tWorst values: %s\n\tWorst pairs: %s" % (repr(worst), repr(worstPairs))
 
-def writeout(outfile, jcf):
-    with open(outfile, 'w') as f:
-        for sect in jcf:
-            f.write(sect.colorline)
-            f.write(sect.content)
-            if not sect.content.endswith("\n\n"):
-                f.write("\n")
-                if sect.content.endswith("\n"):
-                    f.write("\n")
-
-class Section:
-    def __init__(self, colors):
-        self.colors = colors
-        self.colorline = ""
-        self.content = ""
 
 if __name__ == '__main__':
     import argparse
