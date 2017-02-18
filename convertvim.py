@@ -130,6 +130,8 @@ def assignColors(defs, convert, links):
     
     # Calculate terminal colors
     text_fg, text_bg = convert(defs['normal'])
+    if not text_bg: text_bg = '#000000'
+    if not text_bg: text_fg = '#a0a0a0'
     for i, c in enumerate(load_term(toGuiColor(text_fg), toGuiColor(text_bg), list(allcolors))):
         outcolor = tcolreverse[c]
         if isinstance(outcolor, str):
