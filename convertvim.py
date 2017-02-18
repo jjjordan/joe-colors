@@ -1,6 +1,7 @@
 
 import json
 import os.path
+import traceback
 import vimreader
 
 from common import closeColor256, cterm, xterm
@@ -31,9 +32,9 @@ def main(infile, outfile):
         cols256.update(options['colors256'])
         applyTerm(cols256, options['term256'] or options['term'], gui=False)
     
-    cols = assignColors(defs, cvtGui, links)
-    cols.update(options['colorsgui'])
-    applyTerm(cols, options['term'], gui=True)
+    colsGUI = assignColors(defs, cvtGui, links)
+    colsGUI.update(options['colorsgui'])
+    applyTerm(colsGUI, options['term'], gui=True)
     
     if outfile is not None:
         fout = open(outfile, 'w')
@@ -51,6 +52,9 @@ def main(infile, outfile):
         if cols256: writeout(fout, "256", cols256)
         if colsGUI: writeout(fout, "*", colsGUI)
     except:
+        traceback.print_exc()
+        return False
+    finally:
         if outfile is not None:
             fout.close()
     
@@ -131,7 +135,7 @@ def assignColors(defs, convert, links):
     # Calculate terminal colors
     text_fg, text_bg = convert(defs['normal'])
     if not text_bg: text_bg = '#000000'
-    if not text_bg: text_fg = '#a0a0a0'
+    if not text_fg: text_fg = '#a0a0a0'
     for i, c in enumerate(load_term(toGuiColor(text_fg), toGuiColor(text_bg), list(allcolors))):
         outcolor = tcolreverse[c]
         if isinstance(outcolor, str):
