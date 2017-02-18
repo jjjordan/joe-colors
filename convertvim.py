@@ -67,6 +67,7 @@ CONVERT = {
     "cursorline":	["-curlin"],
     "linenr":		["-linum"],
     "cursorlinenr":	["-curlinum"],
+    "pmenu":		["-menu"],
     "pmenusel":		["-menusel"],
     "cursor":		["-cursor"],
     
@@ -102,7 +103,10 @@ CONVERT = {
     
     "diffadd":		["=diff.AddLine"],
     "diffchange":	["=diff.ChgLine"],
-    "diffdelete":	["=diff.DelLine"]
+    "diffdelete":	["=diff.DelLine"],
+    
+    "pythonbuiltin":	["=python.Builtin"],
+    "pythonstatement":	["=python.Statement"],
 }
 
 ORDER = [
