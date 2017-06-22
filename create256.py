@@ -33,7 +33,7 @@ def main(infiles):
         if sect256 is not None:
             sect256.content = newcontent
         else:
-            sect256 = Section("256")
+            sect256 = jcffile.JCFSection("256")
             sect256.colorline = ".colors 256\n"
             sect256.content = newcontent
             jcf.addSection(sect256)

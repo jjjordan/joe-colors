@@ -107,10 +107,26 @@ CONVERT = {
     
     "pythonbuiltin":	["=python.Builtin"],
     "pythonstatement":	["=python.Statement"],
+    
+    # XML/HTML
+    "tag":		["=Tag"],
+    "tagname":		["=TagName"],
+    "endtag":		["=TagEnd"],
+    "entity":		["=Entity"],
+    "xmltag":		["=xml.Tag"],
+    "xmltagname":	["=xml.TagName"],
+    "xmlendtag":	["=xml.TagEnd"],
+    "xmlentity":	["=xml.Entity", "=xml.StringEntity"],
+    "xmlnamespace":	["=xml.Namespace"],
+    "htmltag":		["=html.Tag"],
+    "htmltagname":	["=html.TagName"],
+    "htmlendtag":	["=html.TagEnd"],
+    "htmlscripttag":	["=html.ScriptTag"],
+    "htmlentity":	["=html.Entity", "=html.StringEntity"],
 }
 
 ORDER = [
-    "-text", "-status", "-selection", "-linum", "-curlin", "-curlinum", "-menusel", "-cursor",
+    "-text", "-status", "-selection", "-linum", "-curlin", "-curlinum", "-menu", "-menusel", "-cursor",
     "",
     "-term 0", "-term 1", "-term 2", "-term 3", "-term 4", "-term 5", "-term 6", "-term 7",
     "-term 8", "-term 9", "-term 10", "-term 11", "-term 12", "-term 13", "-term 14", "-term 15",
