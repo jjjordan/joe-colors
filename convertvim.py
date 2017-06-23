@@ -123,6 +123,7 @@ CONVERT = {
     "htmlendtag":	["=html.TagEnd"],
     "htmlscripttag":	["=html.ScriptTag"],
     "htmlentity":	["=html.Entity", "=html.StringEntity"],
+    "title":		["=Title"],
 }
 
 ORDER = [

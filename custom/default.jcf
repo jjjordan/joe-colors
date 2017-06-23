@@ -3,7 +3,7 @@
 
 -selection 	default/default inverse
 -menusel 	default/default inverse
--linum		BLACK
+-linum		default dim
 -curlinum	default
 
 =Idle
