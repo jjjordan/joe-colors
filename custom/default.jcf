@@ -23,6 +23,7 @@
 =Tag		bold blue
 =TagName	+Tag
 =TODO		default/default inverse
+=Title		bold
 
 =diff.DelLine	red
 =diff.AddLine	green
