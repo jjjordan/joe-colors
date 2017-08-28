@@ -4,8 +4,7 @@
         "options": ["no256"]
     },
     "desert": {
-        "copy": ["Based on desert vim scheme by Hans Fugal <hans@fugal.net>"],
-        "options": ["no256"]
+        "copy": ["Based on desert vim scheme by Hans Fugal <hans@fugal.net>"]
     },
     "gruvbox": {
         "options": ["skip"]
