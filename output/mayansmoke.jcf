@@ -1,0 +1,99 @@
+
+.colors 256
+
+-text 16/255
+-status 255/24
+-selection 255/153
+-linum 253/110
+-curlin /254
+-menu /195
+-menusel 255/21 bold
+-cursor 255/16
+
+-term 0 16
+-term 1 160
+-term 2 34
+-term 3 226
+-term 4 21
+-term 5 132
+-term 6 45
+-term 7 254
+-term 8 67
+-term 9 196
+-term 10 46
+-term 11 226
+-term 12 27
+-term 13 132
+-term 14 45
+-term 15 231
+
+=Idle
+=Keyword 45
+=Type 147
+
+=Bad 196/255 underline
+=Boolean 88
+=Comment 110 italic
+=Constant 214
+=DefinedFunction 132
+=DefinedIdent 160
+=Escape 64
+=Preproc 27
+=Statement 21
+=String 30
+=TODO 136/255 underline
+=Title 75/255 bold
+
+=diff.AddLine 16/48
+=diff.ChgLine 16/153
+=diff.DelLine 16/203
+
+.colors *
+
+-text $000000/$F4F4E8
+-status $FFFEEE/$557788
+-selection $ffffff/$00bfff
+-linum $666677/$cccfbf
+-curlin /$e4e4e4
+-menu $8b5a00/$cdcdb4
+-menusel $eeeee0/$8b795e bold
+-cursor $F4F4E8/$000000
+
+-term 0 $000000
+-term 1 $BB0000
+-term 2 $00AA00
+-term 3 $FFFF00
+-term 4 $0000FF
+-term 5 $8470FF
+-term 6 $87CEEB
+-term 7 $E4E4E4
+-term 8 $666677
+-term 9 $FF0000
+-term 10 $00FF00
+-term 11 $FFFF00
+-term 12 $8470FF
+-term 13 $8470FF
+-term 14 $E0FFFF
+-term 15 $FFFFFF
+
+=Idle
+=Keyword $1e90ff
+=Type $8470ff
+
+=Bad $ff0000/$eeeeee underline
+=Boolean $8b3a3a
+=Comment $96AAC2 italic
+=Constant $ff8c00
+=DefinedFunction $8b2252
+=DefinedIdent $cd3333
+=Escape $6e8b3d
+=Preproc $0000ff
+=Statement $0000ff
+=String $458b74
+=TODO $8b5a2b/$eeeeee underline
+=Title $009acd/$eeeeee bold
+
+=diff.AddLine $000000/$54ff9f
+=diff.ChgLine $000000/$b0e2ff
+=diff.DelLine $000000/$f08080
+

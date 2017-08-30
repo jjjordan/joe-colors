@@ -1,0 +1,97 @@
+
+.colors 256
+
+-text 231/235
+-status 16/144
+-selection 186/64
+-linum 244
+-cursor 67/186
+
+-term 0 235
+-term 1 196
+-term 2 46
+-term 3 184
+-term 4 18
+-term 5 90
+-term 6 117
+-term 7 231
+-term 8 223
+-term 9 196
+-term 10 46
+-term 11 184
+-term 12 27
+-term 13 90
+-term 14 117
+-term 15 223
+
+=Idle
+=Operator 196
+=Type 68
+
+=Bad /196
+=Comment 242
+=Constant 217
+=Define 220 bold
+=DefinedFunction 223
+=DefinedIdent 210
+=Escape 143
+=IncSystem 196
+=Preproc 196/231
+=Statement 68
+=String 117
+=Structure 46
+=TODO 202/184
+=Title 220 bold
+
+=diff.AddLine /18
+=diff.ChgLine /90
+=diff.DelLine 18/30
+
+.colors *
+
+-text $ffffff/$262626
+-status $000000/$c2bfa5
+-selection $f0e68c/$6b8e23
+-linum $7f7f7f
+-cursor $708090/$f0e68c
+
+-term 0 $262626
+-term 1 $FF0000
+-term 2 $9ACD32
+-term 3 $EEEE00
+-term 4 $000080
+-term 5 $800080
+-term 6 $87CEEB
+-term 7 $FFFFFF
+-term 8 $E5E5E5
+-term 9 $FF0000
+-term 10 $00FF00
+-term 11 $EEEE00
+-term 12 $4169E1
+-term 13 $708090
+-term 14 $87CEEB
+-term 15 $E5E5E5
+
+=Idle
+=Operator $ff0000
+=Type $6495ed
+
+=Bad $e5e5e5/$ff0000
+=Comment $666666
+=Constant $ffa0a0
+=Define $ffd700 bold
+=DefinedFunction $ffdead
+=DefinedIdent $fa8072
+=Escape $bdb76b
+=IncSystem $ff0000
+=Preproc $ff0000/$ffffff
+=Statement $6495ed
+=String $87ceeb
+=Structure $00ff00
+=TODO $ff4500/$eeee00
+=Title $ffd700 bold
+
+=diff.AddLine /$000080
+=diff.ChgLine /$800080
+=diff.DelLine $000080/$008080
+

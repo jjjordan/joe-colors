@@ -1,0 +1,107 @@
+
+# Based on rdark vim scheme by Radu Dineiu <radu.dineiu@gmail.com>
+
+.colors 256
+
+-text 250/235
+-status 236/250
+-selection /16
+-linum 238/16
+-menu 255/236
+-menusel 235/231
+-cursor 235/250
+
+-term 0 235
+-term 1 160
+-term 2 112
+-term 3 112
+-term 4 25
+-term 5 139
+-term 6 110
+-term 7 250
+-term 8 254
+-term 9 196
+-term 10 112
+-term 11 112
+-term 12 25
+-term 13 139
+-term 14 254
+-term 15 231
+
+=Idle
+=Keyword 255
+=Type 254
+
+=Bad 255/160
+=Comment 242
+=Constant 112
+=DefinedFunction 214
+=DefinedIdent 231
+=Escape 245
+=Number 112
+=Preproc 214
+=Statement 110
+=TODO 214
+=Title 214
+
+=diff.AddLine /235
+=diff.ChgLine /236
+=diff.DelLine 236/233
+=html.Tag 245
+=html.TagEnd 245
+=html.TagName 
+=xml.Tag +html.Tag
+=xml.TagEnd +html.TagEnd
+
+.colors *
+
+-text $babdb6/$1e2426
+-status $2e3436/$babdb6
+-selection /$000000
+-linum $3f4b4d/$000000
+-menu $eeeeec/$2e3436
+-menusel $1e2426/$ffffff
+-cursor $1e2426/$babdb6
+
+-term 0 $1E2426
+-term 1 $CC0000
+-term 2 $8AE234
+-term 3 $8AE234
+-term 4 $204A87
+-term 5 $AD7FA8
+-term 6 $D3D7CF
+-term 7 $BABDB6
+-term 8 $EEEEEC
+-term 9 $EF2929
+-term 10 $8AE234
+-term 11 $8AE234
+-term 12 $3465A4
+-term 13 $AD7FA8
+-term 14 $E3E7DF
+-term 15 $FFFFFF
+
+=Idle
+=Keyword $eeeeec
+=Type $e3e7df
+
+=Bad $eeeeec/$cc0000
+=Comment $656763
+=Constant $8ae234
+=DefinedFunction $fcaf3e
+=DefinedIdent $ffffff
+=Escape $888a85
+=Number $8ae234
+=Preproc $fcaf3e
+=Statement $729fcf
+=TODO $fcaf3e
+=Title $fcaf3e
+
+=diff.AddLine /$1f2b2d
+=diff.ChgLine /$2e3436
+=diff.DelLine $2e3436/$0e1416
+=html.Tag $888a85
+=html.TagEnd $888a85
+=html.TagName 
+=xml.Tag +html.Tag
+=xml.TagEnd +html.TagEnd
+
