@@ -82,5 +82,34 @@
             "=diff.ChgLine": "/236 bold",
             "=diff.DelLine": "236/238"
         }
+    },
+    "zenburn-hc": {
+        "copy": [
+            "High-contrast version of zenburn",
+            "",
+            "Nothing too fancy, just some alien fruit salad to keep you in the zone.",
+            "This syntax file was designed to be used with dark environments and ",
+            "low light situations. Of course, if it works during a daybright office, go",
+            "ahead :)",
+            "",
+            "Owes heavily to other Vim color files! With special mentions",
+            "to \"BlackDust\", \"Camo\" and \"Desert\".",
+            "",
+            "Credits [from VIM]:",
+            " - Jani Nurminen - original Zenburn",
+            " - Steve Hall & Cream posse - higher-contrast Visual selection",
+            " - Kurt Maier - 256 color console coloring, low and high contrast toggle,",
+            "                bug fixing",
+            " - Charlie - spotted too bright StatusLine in non-high contrast mode",
+            " - Pablo Castellazzi - CursorLine fix for 256 color mode"
+        ],
+        "options": ["fromgui"],
+        "colors256": {
+            "-status": "236/186",
+            "=Statement": "187",
+            "=diff.AddLine": "66 bold",
+            "=diff.ChgLine": "/236 bold",
+            "=diff.DelLine": "236/238"
+        }
     }
 }
