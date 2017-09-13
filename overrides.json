@@ -3,8 +3,14 @@
         "copy": ["Based on darkblue2 vim scheme by Datila Carvalho <datila@hotmail.com>"],
         "options": ["no256"]
     },
+    "darkspectrum": {
+        "copy": ["Based on darkspectrum vim scheme by Brian Mock <brian@mockbrian.com>"]
+    },
     "desert": {
-        "copy": ["Based on desert vim scheme by Hans Fugal <hans@fugal.net>"],
+        "copy": ["Based on desert vim scheme by Hans Fugal <hans@fugal.net>"]
+    },
+    "dusk": {
+        "copy": ["Based on dusk vim scheme by Ajit Thakkar <ajit@unb.ca>"],
         "options": ["no256"]
     },
     "gruvbox": {
@@ -32,6 +38,13 @@
             "Which was in turn based on the monokai theme for textmate by Wimer Hazenberg"
         ]
     },
+    "oceandeep": {
+        "copy": ["Based on oceandeep vim scheme by Tom Regner <tom@goochesa.de>"],
+        "options": ["no256"]
+    },
+    "rdark": {
+        "copy": ["Based on rdark vim scheme by Radu Dineiu <radu.dineiu@gmail.com>"]
+    },
     "wombat": {
         "copy": [
             "Based on Wombat vim scheme by Lars H. Nielsen <dengmao@gmail.com>"
@@ -45,7 +58,50 @@
     },
     "zenburn": {
         "copy": [
-            "Based on Zenburn vim scheme by Jani Nurminen <slinky@iki.fi>"
+            "Nothing too fancy, just some alien fruit salad to keep you in the zone.",
+            "This syntax file was designed to be used with dark environments and ",
+            "low light situations. Of course, if it works during a daybright office, go",
+            "ahead :)",
+            "",
+            "Owes heavily to other Vim color files! With special mentions",
+            "to \"BlackDust\", \"Camo\" and \"Desert\".",
+            "",
+            "Credits [from VIM]:",
+            " - Jani Nurminen - original Zenburn",
+            " - Steve Hall & Cream posse - higher-contrast Visual selection",
+            " - Kurt Maier - 256 color console coloring, low and high contrast toggle,",
+            "                bug fixing",
+            " - Charlie - spotted too bright StatusLine in non-high contrast mode",
+            " - Pablo Castellazzi - CursorLine fix for 256 color mode"
+        ],
+        "options": ["fromgui"],
+        "colors256": {
+            "-status": "236/186",
+            "=Statement": "187",
+            "=diff.AddLine": "66 bold",
+            "=diff.ChgLine": "/236 bold",
+            "=diff.DelLine": "236/238"
+        }
+    },
+    "zenburn-hc": {
+        "copy": [
+            "High-contrast version of zenburn",
+            "",
+            "Nothing too fancy, just some alien fruit salad to keep you in the zone.",
+            "This syntax file was designed to be used with dark environments and ",
+            "low light situations. Of course, if it works during a daybright office, go",
+            "ahead :)",
+            "",
+            "Owes heavily to other Vim color files! With special mentions",
+            "to \"BlackDust\", \"Camo\" and \"Desert\".",
+            "",
+            "Credits [from VIM]:",
+            " - Jani Nurminen - original Zenburn",
+            " - Steve Hall & Cream posse - higher-contrast Visual selection",
+            " - Kurt Maier - 256 color console coloring, low and high contrast toggle,",
+            "                bug fixing",
+            " - Charlie - spotted too bright StatusLine in non-high contrast mode",
+            " - Pablo Castellazzi - CursorLine fix for 256 color mode"
         ],
         "options": ["fromgui"],
         "colors256": {

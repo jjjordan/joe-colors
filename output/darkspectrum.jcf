@@ -1,0 +1,107 @@
+
+# Based on darkspectrum vim scheme by Brian Mock <brian@mockbrian.com>
+
+.colors 256
+
+-text 255/235
+-status 231/237
+-selection 231/25
+-linum 239/234
+-curlin /16
+-menu 250/16
+-menusel 231/25
+-cursor 16/231
+
+-term 0 235
+-term 1 196
+-term 2 70
+-term 3 221
+-term 4 24
+-term 5 139
+-term 6 110
+-term 7 255
+-term 8 231
+-term 9 196
+-term 10 112
+-term 11 221
+-term 12 25
+-term 13 139
+-term 14 231
+-term 15 231
+
+=Idle
+=Type 112 bold
+
+=Bad +TODO
+=Character +Number
+=Comment 245
+=Constant 196
+=DefinedFunction 139
+=DefinedIdent 110
+=Escape 179
+=Number 214
+=Preproc 231 bold
+=Statement 231 bold
+=String 221
+=TODO 231/196 bold
+=Title 196
+
+=diff.AddLine 222/130
+=diff.ChgLine 75/24
+=diff.DelLine 16/16
+=html.Tag +html.TagEnd
+=xml.Tag +DefinedIdent
+=xml.TagName +DefinedIdent
+
+.colors *
+
+-text $efefef/$2A2A2A
+-status $FFFFFF/$3C3C3C
+-selection $FFFFFF/$3465a4
+-linum $535353/$202020
+-curlin /$000000
+-menu $c0c0c0/$000000
+-menusel $ffffff/$3465a4
+-cursor $000000/$ffffff
+
+-term 0 $2A2A2A
+-term 1 $EF5939
+-term 2 $8AE234
+-term 3 $FCE94F
+-term 4 $425C78
+-term 5 $AD7FA8
+-term 6 $7FBDFF
+-term 7 $EFEFEF
+-term 8 $FFFFFF
+-term 9 $EF5939
+-term 10 $8AE234
+-term 11 $FCE94F
+-term 12 $3465A4
+-term 13 $AD7FA8
+-term 14 $FFFFFF
+-term 15 $FFFFFF
+
+=Idle
+=Type $8ae234 bold
+
+=Bad +TODO
+=Character +Number
+=Comment $8a8a8a
+=Constant $ef5939
+=DefinedFunction $ad7fa8
+=DefinedIdent $729fcf
+=Escape $e9b96e
+=Number $fcaf3e
+=Preproc $ffffff bold
+=Statement $ffffff bold
+=String $fce94f
+=TODO $FFFFFF/$ef5939 bold
+=Title $ef5939
+
+=diff.AddLine $ffcc7f/$a67429
+=diff.ChgLine $7fbdff/$425c78
+=diff.DelLine $000000/$000000
+=html.Tag +html.TagEnd
+=xml.Tag +DefinedIdent
+=xml.TagName +DefinedIdent
+

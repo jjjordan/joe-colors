@@ -1,0 +1,71 @@
+
+.colors 256
+
+-text 255/236
+-cursor 16/231
+
+-term 0 236
+-term 1 244
+-term 2 112
+-term 3 178
+-term 4 16
+-term 5 139
+-term 6 109
+-term 7 255
+-term 8 252
+-term 9 244
+-term 10 112
+-term 11 112
+-term 12 110
+-term 13 139
+-term 14 109
+-term 15 231
+
+=Idle
+=Type 112
+
+=Comment 244 italic
+=Constant 112
+=DefinedFunction 150 bold
+=DefinedIdent 139
+=Escape 74
+=Preproc 179
+=Statement 110
+=TODO 178
+
+
+.colors *
+
+-text $eeeeec/$2E3436
+-cursor $000000/$ffffff
+
+-term 0 $2E3436
+-term 1 $AD7FA8
+-term 2 $8AE234
+-term 3 $EBC450
+-term 4 $6D7E8A
+-term 5 $AD7FA8
+-term 6 $81ABBD
+-term 7 $EEEEEC
+-term 8 $D2D2D2
+-term 9 $AD7FA8
+-term 10 $8AE234
+-term 11 $EBC450
+-term 12 $6D7E8A
+-term 13 $AD7FA8
+-term 14 $81ABBD
+-term 15 $FFFFFF
+
+=Idle
+=Type $8AE234
+
+=Comment $6d7e8a italic
+=Constant $8ae234
+=DefinedFunction $9BCF8D bold
+=DefinedIdent $AD7FA8
+=Escape $5EAFE5
+=Preproc $e9ba6e
+=Statement $729FCF
+=TODO $EBC450
+
+
