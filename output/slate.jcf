@@ -1,4 +1,6 @@
 
+# Based on the slate vim color scheme by Ralph Amissah <ralph@amissah.com>
+
 .colors 256
 
 -text 231/235

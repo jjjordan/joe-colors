@@ -1,4 +1,6 @@
 
+# Based on mayansmoke vim color scheme by Jeet Sukumaran and Clayton Parker
+
 .colors 256
 
 -text 16/255
@@ -41,10 +43,10 @@
 =Preproc 27
 =Statement 21
 =String 30
-=TODO 136/255 underline
+=TODO 136 underline
 =Title 75/255 bold
 
-=diff.AddLine 16/48
+=diff.AddLine /48
 =diff.ChgLine 16/153
 =diff.DelLine 16/203
 
@@ -93,7 +95,7 @@
 =TODO $8b5a2b/$eeeeee underline
 =Title $009acd/$eeeeee bold
 
-=diff.AddLine $000000/$54ff9f
+=diff.AddLine /$54ff9f
 =diff.ChgLine $000000/$b0e2ff
 =diff.DelLine $000000/$f08080
 

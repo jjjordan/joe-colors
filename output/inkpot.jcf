@@ -1,4 +1,7 @@
 
+# Based on inkpot vim scheme by Ciaran McCreesh <ciaran.mccreesh@googlemail.com>
+# https://github.com/ciaranm/inkpot
+
 .colors 256
 
 -text 251/16

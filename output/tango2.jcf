@@ -1,4 +1,7 @@
 
+# Based on the tango2 vim color scheme by Pranesh Srinivasan
+# https://vim.sourceforge.io/scripts/script.php?script_id=2414
+
 .colors 256
 
 -text 255/236

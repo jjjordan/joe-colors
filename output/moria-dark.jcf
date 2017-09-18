@@ -1,4 +1,7 @@
 
+# Based on moria vim scheme by Georg Dahn
+# https://vim.sourceforge.io/scripts/script.php?script_id=1464
+
 .colors 256
 
 -text 252/234

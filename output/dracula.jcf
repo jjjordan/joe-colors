@@ -1,59 +1,7 @@
 
-.colors 256
-
--text 231/235
--status 231/236 bold
--selection /241
--linum 60
--curlin /234
--curlinum 228/234
--menusel /236
--cursor 17/231
-
--term 0 235
--term 1 88
--term 2 84
--term 3 228
--term 4 17
--term 5 141
--term 6 81
--term 7 231
--term 8 117
--term 9 88
--term 10 84
--term 11 228
--term 12 61
--term 13 212
--term 14 81
--term 15 117
-
-=Idle
-=Keyword 212
-=Operator 212
-=Type 117
-
-=Boolean 141
-=Character 141
-=Comment 61
-=Conditional 212
-=Define 212
-=DefinedFunction 84
-=DefinedIdent 117 italic
-=Escape 231
-=Float 141
-=Label 228
-=Number 141
-=Preproc 212
-=Statement 212
-=StorageClass 117 italic
-=String 228
-=TODO 61 bold
-=Tag 212
-=Title 231 bold
-
-=diff.AddLine 231/64 bold
-=diff.ChgLine 231/23
-=diff.DelLine 88
+# Dracula theme v1.2.7
+# Based on vim theme by Trevor Heins, Everton Ribeiro, and Zeno Rocha
+# https://github.com/dracula/dracula-theme
 
 .colors *
 

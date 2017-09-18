@@ -1,4 +1,7 @@
 
+# Based on freya vim theme by Georg Dahn
+# https://vim.sourceforge.io/scripts/script.php?script_id=1651
+
 .colors 256
 
 -text 253/235

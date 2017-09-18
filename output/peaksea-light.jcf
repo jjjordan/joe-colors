@@ -1,4 +1,7 @@
 
+# Based on the peaksea vim color scheme by Pan, Shi Zhu
+# https://vim.sourceforge.io/scripts/script.php?script_id=760
+
 .colors 256
 
 -text 16/188

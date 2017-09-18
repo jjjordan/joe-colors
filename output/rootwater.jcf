@@ -1,4 +1,6 @@
 
+# Based on the rootwater vim color scheme by Radu Dineiu <radu.dineiu@gmail.com>
+
 .colors 256
 
 -text 250/234

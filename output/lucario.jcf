@@ -53,8 +53,8 @@
 =Tag $ff6541
 =Title $ffffff bold
 
-=diff.AddLine $ffffff/$478815 bold
-=diff.ChgLine $ffffff/$26446c
+=diff.AddLine /$478815 bold
+=diff.ChgLine /$26446c
 =diff.DelLine $8c0c10
 =python.Builtin $66d9ef italic
 =python.Statement $66d9ef italic

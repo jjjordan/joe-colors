@@ -9,12 +9,38 @@
     "desert": {
         "copy": ["Based on desert vim scheme by Hans Fugal <hans@fugal.net>"]
     },
+    "dracula": {
+        "copy": [
+            "Dracula theme v1.2.7",
+            "Based on vim theme by Trevor Heins, Everton Ribeiro, and Zeno Rocha",
+            "https://github.com/dracula/dracula-theme"
+        ],
+        "options": ["no256"]
+    },
     "dusk": {
         "copy": ["Based on dusk vim scheme by Ajit Thakkar <ajit@unb.ca>"],
         "options": ["no256"]
     },
+    "eclipse": {
+        "copy": [
+            "Based on eclipse vim theme by Juan Frias <juandfrias at gmail dot com>",
+            "http://www.axisym3.net/jdany/vim-the-editor/#eclipse"
+        ]
+    },
+    "freya": {
+        "copy": [
+            "Based on freya vim theme by Georg Dahn",
+            "https://vim.sourceforge.io/scripts/script.php?script_id=1651"
+        ]
+    },
     "gruvbox": {
         "options": ["skip"]
+    },
+    "inkpot": {
+        "copy": [
+            "Based on inkpot vim scheme by Ciaran McCreesh <ciaran.mccreesh@googlemail.com>",
+            "https://github.com/ciaranm/inkpot"
+        ]
     },
     "ir_black": {
         "copy": [
@@ -32,18 +58,67 @@
         ],
         "options": ["no256"]
     },
+    "lucius": {
+        "copy": [
+            "Based on lucius vim theme by Jonathan Filip <jfilip1024@gmail.com>"
+        ]
+    },
+    "mayansmoke": {
+        "copy": [
+            "Based on mayansmoke vim color scheme by Jeet Sukumaran and Clayton Parker"
+        ]
+    },
     "molokai": {
         "copy": [
             "Based on Molokai vim scheme by Tomas Restrepo <tomas@winterdom.com>",
             "Which was in turn based on the monokai theme for textmate by Wimer Hazenberg"
         ]
     },
+    "moria-dark": {
+        "copy": [
+            "Based on moria vim scheme by Georg Dahn",
+            "https://vim.sourceforge.io/scripts/script.php?script_id=1464"
+        ]
+    },
+    "moria-light": {
+        "copy": [
+            "Based on moria vim scheme by Georg Dahn",
+            "https://vim.sourceforge.io/scripts/script.php?script_id=1464"
+        ]
+    },
     "oceandeep": {
         "copy": ["Based on oceandeep vim scheme by Tom Regner <tom@goochesa.de>"],
         "options": ["no256"]
     },
+    "peaksea-dark": {
+        "copy": [
+            "Based on the peaksea vim color scheme by Pan, Shi Zhu",
+            "https://vim.sourceforge.io/scripts/script.php?script_id=760"
+        ]
+    },
+    "peaksea-light": {
+        "copy": [
+            "Based on the peaksea vim color scheme by Pan, Shi Zhu",
+            "https://vim.sourceforge.io/scripts/script.php?script_id=760"
+        ]
+    },
+    "pyte": {
+        "copy": ["Based on the pyte vim color scheme by Henning Hasemann <info@leetless.de>"]
+    },
     "rdark": {
         "copy": ["Based on rdark vim scheme by Radu Dineiu <radu.dineiu@gmail.com>"]
+    },
+    "rootwater": {
+        "copy": ["Based on the rootwater vim color scheme by Radu Dineiu <radu.dineiu@gmail.com>"]
+    },
+    "slate": {
+        "copy": ["Based on the slate vim color scheme by Ralph Amissah <ralph@amissah.com>"]
+    },
+    "tango2": {
+        "copy": [
+            "Based on the tango2 vim color scheme by Pranesh Srinivasan",
+            "https://vim.sourceforge.io/scripts/script.php?script_id=2414"
+        ]
     },
     "wombat": {
         "copy": [
