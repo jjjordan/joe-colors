@@ -25,7 +25,7 @@ script is to be run before checking in JCF files to that repository.
 
 ## Converting from VIM schemes
 
-Most of the schemes here are generated from the VIM script scheme, which is
+Most of the schemes here are generated from the VIM script schemes, which is
 performed by the `convertvim.py` program.  The `Makefile` here is also
 geared towards automating this process:
 
@@ -41,6 +41,9 @@ distribution of JOE.
 * You'll want to build with multiple cores (`-j`) for the fastest result. 
 Color scheme generation is an expensive operation due to the complications
 converting them to xterm-256 (properly) and matching terminal colors.
+
+Additional options are set in `overrides.json`, which specifies things like
+attributions, color overrides, and the like.
 
 ### VIM syntax
 
