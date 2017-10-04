@@ -1,10 +1,10 @@
 
 PROD_COLORS := ir_black molokai wombat xoria256 zenburn zenburn-hc desert
-PROD_COLORS_IN := $(patsubst %,./schemes/%.vim,$(PROD_COLORS))
+PROD_COLORS_IN := $(patsubst %,./vim-schemes/%.vim,$(PROD_COLORS))
 PROD_COLORS_OUT := $(patsubst %,./output/%.jcf,$(PROD_COLORS))
 
-ALL_COLORS_IN := $(wildcard ./schemes/*.vim)
-ALL_COLORS_OUT := $(patsubst ./schemes/%.vim,./output/%.jcf,$(ALL_COLORS_IN))
+ALL_COLORS_IN := $(wildcard ./vim-schemes/*.vim)
+ALL_COLORS_OUT := $(patsubst ./vim-schemes/%.vim,./output/%.jcf,$(ALL_COLORS_IN))
 
 # Considering
 #   darkspectrum, freya, inkpot, lucius, moria-light
@@ -31,5 +31,5 @@ install: prod
 	cp ./output/*.jcf ${HOME}/.joe/colors
 	cp ./custom/*.jcf ${HOME}/.joe/colors
 
-output/%.jcf : schemes/%.vim *.py venv overrides.json
+output/%.jcf : vim-schemes/%.vim *.py venv overrides.json
 	venv/bin/python3 convertvim.py $< -o $@
