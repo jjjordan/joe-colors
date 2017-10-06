@@ -1,0 +1,111 @@
+
+.colors 256
+
+-text 255/235
+-status 234/242 bold
+-selection /16
+-linum 238
+-curlin /236
+-curlinum 81
+-menu 235/81
+-menusel 235/185
+-cursor 235/255
+
+-term 0 235
+-term 1 160
+-term 2 142
+-term 3 185
+-term 4 238
+-term 5 66
+-term 6 81
+-term 7 255
+-term 8 231
+-term 9 160
+-term 10 185
+-term 11 185
+-term 12 66
+-term 13 66
+-term 14 81
+-term 15 231
+
+=Idle
+=Operator 203
+=Type 81
+
+=Bad 255/203
+=Boolean 215
+=Character 215
+=Comment 242
+=Conditional 185
+=Constant 215
+=DefinedFunction 153
+=DefinedIdent 153
+=Escape 81
+=Float 215
+=Number 215
+=Preproc 185
+=Statement 153
+=String 180
+=TODO 203 bold
+=Title 153 bold
+
+=diff.AddLine /238
+=diff.ChgLine /239
+=diff.DelLine 203/237
+=xml.Namespace 215
+
+.colors *
+
+-text $eeeeee/$282828
+-status $1d1d1d/$666666 bold
+-selection /$040404
+-linum $444444
+-curlin /$323232
+-curlinum $73cef4
+-menu $282828/$73cef4
+-menusel $282828/$c9d05c
+-cursor $282828/$eeeeee
+
+-term 0 $282828
+-term 1 $C5152F
+-term 2 $9FAA00
+-term 3 $C9D05C
+-term 4 $335261
+-term 5 $335261
+-term 6 $73CEF4
+-term 7 $EEEEEE
+-term 8 $FFFFFF
+-term 9 $FF5F5F
+-term 10 $C9D05C
+-term 11 $C9D05C
+-term 12 $44778D
+-term 13 $F43753
+-term 14 $B3DEEF
+-term 15 $FFFFFF
+
+=Idle
+=Operator $f43753
+=Type $73cef4
+
+=Bad $eeeeee/$f43753
+=Boolean $ffc24b
+=Character $ffc24b
+=Comment $666666
+=Conditional $c9d05c
+=Constant $ffc24b
+=DefinedFunction $b3deef
+=DefinedIdent $b3deef
+=Escape $73cef4
+=Float $ffc24b
+=Number $ffc24b
+=Preproc $c9d05c
+=Statement $b3deef
+=String $d3b987
+=TODO $f43753 bold
+=Title $b3deef bold
+
+=diff.AddLine /$464632
+=diff.ChgLine /$335261
+=diff.DelLine $f43753/$79313c
+=xml.Namespace $ffc24b
+
