@@ -1,4 +1,7 @@
 
+# Based on tender, a dark and fresh color scheme for vim
+# by Jacobo Taberno http://jacoborus.codes
+
 .colors 256
 
 -text 255/235

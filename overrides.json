@@ -120,6 +120,12 @@
             "https://vim.sourceforge.io/scripts/script.php?script_id=2414"
         ]
     },
+    "tender": {
+        "copy": [
+            "Based on tender, a dark and fresh color scheme for vim",
+            "by Jacobo Taberno http://jacoborus.codes"
+        ]
+    },
     "wombat": {
         "copy": [
             "Based on Wombat vim scheme by Lars H. Nielsen <dengmao@gmail.com>"
