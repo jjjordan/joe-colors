@@ -12,6 +12,7 @@
 -curlin /$44475a
 -curlinum $f1fa8c/$44475a
 -menusel /$44475a
+-visiblews $525563/$262626
 -cursor $282a36/$f8f8f0
 
 -term 0 $282A36

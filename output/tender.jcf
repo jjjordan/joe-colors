@@ -12,6 +12,7 @@
 -curlinum 81
 -menu 235/81
 -menusel 235/185
+-visiblews 238
 -cursor 235/255
 
 -term 0 235
@@ -67,6 +68,7 @@
 -curlinum $73cef4
 -menu $282828/$73cef4
 -menusel $282828/$c9d05c
+-visiblews $444444
 -cursor $282828/$eeeeee
 
 -term 0 $282828

@@ -9,6 +9,7 @@
 -selection 255/61
 -linum 104/236
 -curlin /236
+-visiblews 135
 -cursor 238/105
 
 -term 0 16
@@ -55,6 +56,7 @@
 -selection $eeeeee/$4e4e8f
 -linum $8b8bcd/$2e2e2e
 -curlin /$2e2e37
+-visiblews $ab60ed
 -cursor $404040/$8b8bff
 
 -term 0 $000000

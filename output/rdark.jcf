@@ -9,6 +9,7 @@
 -linum 238/16
 -menu 255/236
 -menusel 235/231
+-visiblews 196
 -cursor 235/250
 
 -term 0 235
@@ -61,6 +62,7 @@
 -linum $3f4b4d/$000000
 -menu $eeeeec/$2e3436
 -menusel $1e2426/$ffffff
+-visiblews $ef2929
 -cursor $1e2426/$babdb6
 
 -term 0 $1E2426

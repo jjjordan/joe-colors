@@ -25,6 +25,7 @@
 -curlinum 187/235
 -menu 247/236
 -menusel 187/235 bold
+-visiblews 151/238
 -cursor 232/109 bold
 
 -term 0 237
@@ -90,6 +91,7 @@
 -curlinum $d2d39b/$262626
 -menu $9f9f9f/$2c2e2e
 -menusel $d0d0a0/$242424 bold
+-visiblews $9ece9e/$444444
 -cursor $000d18/$8faf9f bold
 
 -term 0 $3F3F3F

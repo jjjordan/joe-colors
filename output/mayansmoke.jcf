@@ -10,6 +10,7 @@
 -curlin /254
 -menu /195
 -menusel 255/21 bold
+-visiblews 255/144
 -cursor 255/16
 
 -term 0 16
@@ -43,10 +44,10 @@
 =Preproc 27
 =Statement 21
 =String 30
-=TODO 136 underline
+=TODO 136/255 underline
 =Title 75/255 bold
 
-=diff.AddLine /48
+=diff.AddLine 16/48
 =diff.ChgLine 16/153
 =diff.DelLine 16/203
 
@@ -59,6 +60,7 @@
 -curlin /$e4e4e4
 -menu $8b5a00/$cdcdb4
 -menusel $eeeee0/$8b795e bold
+-visiblews $eeeeee/$afaf87
 -cursor $F4F4E8/$000000
 
 -term 0 $000000
@@ -95,7 +97,7 @@
 =TODO $8b5a2b/$eeeeee underline
 =Title $009acd/$eeeeee bold
 
-=diff.AddLine /$54ff9f
+=diff.AddLine $000000/$54ff9f
 =diff.ChgLine $000000/$b0e2ff
 =diff.DelLine $000000/$f08080
 

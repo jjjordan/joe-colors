@@ -10,6 +10,7 @@
 -linum 242/255
 -menu 231/46
 -menusel 
+-visiblews 250
 -cursor 231/33
 
 -term 0 16
@@ -64,6 +65,7 @@
 -linum $6b6b6b/$eeeeee
 -menu $ffffff/$00ff00
 -menusel $000000/$ffffff
+-visiblews $c0c0c0
 -cursor $ffffff/$0080f0
 
 -term 0 $000000

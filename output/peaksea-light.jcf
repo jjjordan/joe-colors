@@ -11,6 +11,7 @@
 -curlin  underline
 -menu /182
 -menusel 255/95
+-visiblews 25
 -cursor 255/28
 
 -term 0 16
@@ -61,6 +62,7 @@
 -curlin  underline
 -menu /$e0b0e0
 -menusel $f0f0f0/$806060
+-visiblews $1050a0
 -cursor $f0f0f0/$008000
 
 -term 0 $000000

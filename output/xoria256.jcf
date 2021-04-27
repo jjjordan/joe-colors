@@ -10,6 +10,7 @@
 -curlin /237
 -menu 16/250
 -menusel 255/243
+-visiblews 77
 -cursor /214
 
 -term 0 234
@@ -58,6 +59,7 @@
 -curlin /$3a3a3a
 -menu $000000/$bcbcbc
 -menusel $eeeeee/$767676
+-visiblews $5fdf5f
 -cursor $1c1c1c/$ffaf00
 
 -term 0 $1C1C1C

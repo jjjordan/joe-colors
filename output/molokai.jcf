@@ -11,6 +11,7 @@
 -curlin /236
 -menu 81/16
 -menusel /244
+-visiblews 245 italic
 -cursor 16/231
 
 -term 0 234
@@ -74,6 +75,7 @@
 -curlin /$293739
 -menu $66D9EF/$000000
 -menusel /$808080
+-visiblews $888A85 italic
 -cursor $000000/$F8F8F0
 
 -term 0 $1B1D1E

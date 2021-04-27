@@ -8,6 +8,7 @@
 -selection 114/65
 -linum 242/16
 -curlin /236
+-visiblews 240/236
 -cursor 22/114
 
 -term 0 234
@@ -55,6 +56,7 @@
 -selection $77dd88/$448844
 -linum $607075/$000000
 -curlin /$303035
+-visiblews $4f5b5d/$2c3032
 -cursor $3a553a/$77dd88
 
 -term 0 $151B1D

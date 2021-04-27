@@ -7,6 +7,7 @@
 -status $00008b/$bebebe
 -selection $607b8b/$fffff0
 -linum $cdb7b5
+-visiblews $00ffff
 -cursor $000000/$00ff00
 
 -term 0 $1F3048

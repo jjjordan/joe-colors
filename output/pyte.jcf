@@ -6,6 +6,7 @@
 -text 238/255
 -status 231/245 bold italic
 -linum 231/252
+-visiblews 181
 -cursor 16/249
 
 -term 0 238
@@ -56,6 +57,7 @@
 -text $404850/$f0f0f0
 -status $ffffff/$8090a0 bold italic
 -linum $ffffff/$c0d0e0
+-visiblews $d0b0b0
 -cursor $000000/$b0b4b8
 
 -term 0 $404850

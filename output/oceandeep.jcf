@@ -8,6 +8,7 @@
 -selection $ffffff/$2e8b57
 -linum $8db6cd/$0f0f0f bold
 -curlin /$003853
+-visiblews $324262
 -cursor $ffffff/$96cdcd
 
 -term 0 $103040

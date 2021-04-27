@@ -8,6 +8,7 @@
 -status 252/234 italic
 -selection /17
 -linum 237
+-visiblews 244/236
 -cursor 16/231
 
 -term 0 239
@@ -71,6 +72,7 @@
 -status $CCCCCC/$202020 italic
 -selection /$262D51
 -linum $3D3D3D
+-visiblews $808080/$343434
 -cursor $000000/$ffffff
 
 -term 0 $4E4E4E

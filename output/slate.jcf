@@ -7,6 +7,7 @@
 -status 16/144
 -selection 186/64
 -linum 244
+-visiblews 149
 -cursor 67/186
 
 -term 0 235
@@ -55,6 +56,7 @@
 -status $000000/$c2bfa5
 -selection $f0e68c/$6b8e23
 -linum $7f7f7f
+-visiblews $9acd32
 -cursor $708090/$f0e68c
 
 -term 0 $262626

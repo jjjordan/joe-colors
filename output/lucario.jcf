@@ -11,6 +11,7 @@
 -curlin /$405160
 -menu /$19242f
 -menusel /$66747f
+-visiblews $61bbc8/$405160
 -cursor $2b3e50/$f8f8f2
 
 -term 0 $2B3E50
@@ -53,8 +54,8 @@
 =Tag $ff6541
 =Title $ffffff bold
 
-=diff.AddLine /$478815 bold
-=diff.ChgLine /$26446c
+=diff.AddLine $ffffff/$478815 bold
+=diff.ChgLine $ffffff/$26446c
 =diff.DelLine $8c0c10
 =python.Builtin $66d9ef italic
 =python.Statement $66d9ef italic
