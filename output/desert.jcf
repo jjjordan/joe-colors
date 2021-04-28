@@ -20,11 +20,11 @@
 -term 8 250
 -term 9 202
 -term 10 120
--term 11 184
+-term 11 220
 -term 12 67
--term 13 90
--term 14 117
--term 15 250
+-term 13 210
+-term 14 153
+-term 15 223
 
 =Idle
 =Type 143
@@ -54,7 +54,7 @@
 -term 0 $333333
 -term 1 $800000
 -term 2 $9ACD32
--term 3 $EEEE00
+-term 3 $FFD700
 -term 4 $000080
 -term 5 $800080
 -term 6 $87CEEB
@@ -64,9 +64,9 @@
 -term 10 $00FF7F
 -term 11 $EEEE00
 -term 12 $708090
--term 13 $708090
+-term 13 $CD5C5C
 -term 14 $ADD8E6
--term 15 $C0C0C0
+-term 15 $F5DEB3
 
 =Idle
 =Type $bdb76b

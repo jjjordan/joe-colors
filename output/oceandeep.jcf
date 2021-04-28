@@ -12,17 +12,17 @@
 
 -term 0 $103040
 -term 1 $B22222
--term 2 $7FFF00
--term 3 $7FFF00
+-term 2 $4EEE94
+-term 3 $90EE90
 -term 4 $305060
--term 5 $E066FF
+-term 5 $607B8B
 -term 6 $00CDCD
 -term 7 $E0EEE0
 -term 8 $E0E0E0
 -term 9 $FF3030
 -term 10 $7FFF00
--term 11 $7FFF00
--term 12 $607B8B
+-term 11 $FFFFE0
+-term 12 $507080
 -term 13 $E066FF
 -term 14 $00FFFF
 -term 15 $FFFFFF

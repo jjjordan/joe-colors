@@ -14,17 +14,17 @@
 
 -term 0 235
 -term 1 160
--term 2 46
+-term 2 114
 -term 3 186
 -term 4 21
--term 5 201
+-term 5 66
 -term 6 80
 -term 7 254
 -term 8 145
 -term 9 196
 -term 10 46
 -term 11 190
--term 12 21
+-term 12 60
 -term 13 201
 -term 14 51
 -term 15 152
@@ -78,10 +78,10 @@
 
 -term 0 $242424
 -term 1 $EE0000
--term 2 $00FF00
--term 3 $DEEE33
+-term 2 $93E690
+-term 3 $CAE682
 -term 4 $0000FF
--term 5 $FF00FF
+-term 5 $9FAFAF
 -term 6 $50D6DE
 -term 7 $E4E4E4
 -term 8 $E0E0E0

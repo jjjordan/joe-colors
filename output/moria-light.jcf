@@ -15,11 +15,11 @@
 
 -term 0 16
 -term 1 124
--term 2 157
--term 3 226
+-term 2 28
+-term 3 222
 -term 4 20
 -term 5 90
--term 6 51
+-term 6 110
 -term 7 253
 -term 8 247
 -term 9 196
@@ -59,19 +59,19 @@
 -cursor $f0f0f0/$883400
 
 -term 0 $000000
--term 1 $EE2C2C
--term 2 $A0F0A0
--term 3 $FFFF00
+-term 1 $912F11
+-term 2 $008B00
+-term 3 $FFCD78
 -term 4 $0000F0
 -term 5 $800090
--term 6 $00FFFF
+-term 6 $B8C6E2
 -term 7 $D8D8D8
 -term 8 $A0A0A0
 -term 9 $EE2C2C
 -term 10 $A0F0A0
 -term 11 $FFFF00
 -term 12 $4A6DB5
--term 13 $800090
+-term 13 $8FA5D1
 -term 14 $00FFFF
 -term 15 $FFFFFF
 

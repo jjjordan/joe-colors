@@ -13,19 +13,19 @@
 
 -term 0 235
 -term 1 160
--term 2 112
--term 3 112
--term 4 25
--term 5 139
+-term 2 245
+-term 3 214
+-term 4 238
+-term 5 242
 -term 6 110
 -term 7 250
 -term 8 254
 -term 9 196
 -term 10 112
--term 11 112
+-term 11 255
 -term 12 25
 -term 13 139
--term 14 254
+-term 14 253
 -term 15 231
 
 =Idle
@@ -65,19 +65,19 @@
 
 -term 0 $1E2426
 -term 1 $CC0000
--term 2 $8AE234
--term 3 $8AE234
+-term 2 $888A85
+-term 3 $FCAF3E
 -term 4 $204A87
--term 5 $AD7FA8
--term 6 $D3D7CF
+-term 5 $3F4B4D
+-term 6 $729FCF
 -term 7 $BABDB6
 -term 8 $EEEEEC
 -term 9 $EF2929
 -term 10 $8AE234
--term 11 $8AE234
+-term 11 $E3E7DF
 -term 12 $3465A4
 -term 13 $AD7FA8
--term 14 $E3E7DF
+-term 14 $D3D7CF
 -term 15 $FFFFFF
 
 =Idle

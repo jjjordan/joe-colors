@@ -14,21 +14,21 @@
 -cursor 16/231
 
 -term 0 234
--term 1 196
--term 2 148
--term 3 148
--term 4 125
+-term 1 197
+-term 2 245
+-term 3 144
+-term 4 238
 -term 5 125
--term 6 81
+-term 6 246
 -term 7 231
 -term 8 250
 -term 9 196
 -term 10 148
--term 11 148
--term 12 141
+-term 11 186
+-term 12 244
 -term 13 141
 -term 14 81
--term 15 250
+-term 15 181
 
 =Idle
 =Keyword 197 bold
@@ -77,19 +77,19 @@
 -cursor $000000/$F8F8F0
 
 -term 0 $1B1D1E
--term 1 $EF5939
--term 2 $A6E22E
--term 3 $E6DB74
+-term 1 $960050
+-term 2 $888A85
+-term 3 $C4BE89
 -term 4 $13354A
 -term 5 $465457
--term 6 $66D9EF
+-term 6 $BCBCBC
 -term 7 $F8F8F2
--term 8 $FFFFFF
+-term 8 $F8F8F0
 -term 9 $EF5939
 -term 10 $A6E22E
 -term 11 $E6DB74
 -term 12 $AE81FF
--term 13 $AE81FF
+-term 13 $F92672
 -term 14 $66D9EF
 -term 15 $FFFFFF
 

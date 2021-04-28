@@ -29,14 +29,14 @@
 
 -term 0 237
 -term 1 167
--term 2 115
+-term 2 79
 -term 3 186
 -term 4 238
--term 5 139
--term 6 116
+-term 5 66
+-term 6 109
 -term 7 253
 -term 8 188
--term 9 167
+-term 9 173
 -term 10 115
 -term 11 228
 -term 12 103
@@ -101,12 +101,12 @@
 -term 6 $8CD0D3
 -term 7 $DCDCCC
 -term 8 $DFDFDF
--term 9 $E37170
+-term 9 $DC8C6C
 -term 10 $CCDC90
 -term 11 $F8F893
 -term 12 $8C8CBC
--term 13 $BC8CBC
--term 14 $8CD0D3
+-term 13 $9FAFAF
+-term 14 $71D3B4
 -term 15 $FFFFFF
 
 =Idle

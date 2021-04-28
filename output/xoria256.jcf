@@ -16,16 +16,16 @@
 -term 1 160
 -term 2 77
 -term 3 184
--term 4 98
--term 5 98
--term 6 151
+-term 4 60
+-term 5 96
+-term 6 110
 -term 7 252
 -term 8 254
--term 9 160
--term 10 77
--term 11 184
+-term 9 174
+-term 10 149
+-term 11 229
 -term 12 98
--term 13 98
+-term 13 168
 -term 14 151
 -term 15 231
 
@@ -64,16 +64,16 @@
 -term 1 $800000
 -term 2 $5FDF5F
 -term 3 $DFDF00
--term 4 $875FDF
--term 5 $875FDF
--term 6 $AFDFAF
+-term 4 $5F5F87
+-term 5 $875F87
+-term 6 $87AFDF
 -term 7 $D0D0D0
 -term 8 $E4E4E4
 -term 9 $DF8787
--term 10 $5FDF5F
--term 11 $DFDF00
+-term 10 $AFDF5F
+-term 11 $FFFFAF
 -term 12 $875FDF
--term 13 $875FDF
+-term 13 $DF5F87
 -term 14 $AFDFAF
 -term 15 $FFFFFF
 

@@ -18,7 +18,7 @@
 -term 8 252
 -term 9 244
 -term 10 112
--term 11 112
+-term 11 150
 -term 12 110
 -term 13 139
 -term 14 109
@@ -43,7 +43,7 @@
 -cursor $000000/$ffffff
 
 -term 0 $2E3436
--term 1 $AD7FA8
+-term 1 $000000
 -term 2 $8AE234
 -term 3 $EBC450
 -term 4 $6D7E8A
@@ -51,7 +51,7 @@
 -term 6 $81ABBD
 -term 7 $EEEEEC
 -term 8 $D2D2D2
--term 9 $AD7FA8
+-term 9 $E9BA6E
 -term 10 $8AE234
 -term 11 $EBC450
 -term 12 $6D7E8A

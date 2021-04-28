@@ -13,20 +13,20 @@
 -cursor 16/231
 
 -term 0 235
--term 1 196
+-term 1 130
 -term 2 70
--term 3 221
+-term 3 222
 -term 4 24
--term 5 139
+-term 5 244
 -term 6 110
 -term 7 255
--term 8 231
+-term 8 250
 -term 9 196
 -term 10 112
 -term 11 221
 -term 12 25
 -term 13 139
--term 14 231
+-term 14 248
 -term 15 231
 
 =Idle
@@ -65,11 +65,11 @@
 -cursor $000000/$ffffff
 
 -term 0 $2A2A2A
--term 1 $EF5939
--term 2 $8AE234
--term 3 $FCE94F
+-term 1 $A67429
+-term 2 $4E9A06
+-term 3 $E9B96E
 -term 4 $425C78
--term 5 $AD7FA8
+-term 5 $808080
 -term 6 $7FBDFF
 -term 7 $EFEFEF
 -term 8 $FFFFFF
@@ -78,7 +78,7 @@
 -term 11 $FCE94F
 -term 12 $3465A4
 -term 13 $AD7FA8
--term 14 $FFFFFF
+-term 14 $C0C0C0
 -term 15 $FFFFFF
 
 =Idle

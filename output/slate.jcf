@@ -10,19 +10,19 @@
 -cursor 67/186
 
 -term 0 235
--term 1 196
--term 2 46
+-term 1 88
+-term 2 149
 -term 3 184
 -term 4 18
 -term 5 90
--term 6 117
+-term 6 30
 -term 7 231
--term 8 223
+-term 8 144
 -term 9 196
 -term 10 46
--term 11 184
+-term 11 220
 -term 12 27
--term 13 90
+-term 13 210
 -term 14 117
 -term 15 223
 
@@ -58,12 +58,12 @@
 -cursor $708090/$f0e68c
 
 -term 0 $262626
--term 1 $FF0000
+-term 1 $800000
 -term 2 $9ACD32
--term 3 $EEEE00
+-term 3 $FFD700
 -term 4 $000080
 -term 5 $800080
--term 6 $87CEEB
+-term 6 $008080
 -term 7 $FFFFFF
 -term 8 $E5E5E5
 -term 9 $FF0000
@@ -72,7 +72,7 @@
 -term 12 $4169E1
 -term 13 $708090
 -term 14 $87CEEB
--term 15 $E5E5E5
+-term 15 $F5DEB3
 
 =Idle
 =Operator $ff0000

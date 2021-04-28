@@ -14,17 +14,17 @@
 -cursor 234/214
 
 -term 0 234
--term 1 196
+-term 1 88
 -term 2 40
 -term 3 184
 -term 4 20
--term 5 20
--term 6 116
+-term 5 60
+-term 6 74
 -term 7 252
--term 8 231
+-term 8 189
 -term 9 196
--term 10 40
--term 11 184
+-term 10 113
+-term 11 222
 -term 12 68
 -term 13 182
 -term 14 116
@@ -59,14 +59,14 @@
 -cursor $202020/$ffa500
 
 -term 0 $202020
--term 1 $EE2C2C
--term 2 $00E700
--term 3 $E0E000
+-term 1 $8B0000
+-term 2 $87DF71
+-term 3 $E0CD78
 -term 4 $0000CD
--term 5 $D7A0D7
--term 6 $7EE0CE
+-term 5 $00008B
+-term 6 $008B8B
 -term 7 $D0D0D0
--term 8 $FFFFFF
+-term 8 $BDCAE3
 -term 9 $EE2C2C
 -term 10 $00E700
 -term 11 $E0E000

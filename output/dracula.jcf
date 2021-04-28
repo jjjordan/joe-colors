@@ -16,14 +16,14 @@
 
 -term 0 $282A36
 -term 1 $8B080B
--term 2 $50FA7B
--term 3 $F1FA8C
+-term 2 $468410
+-term 3 $FFB86C
 -term 4 $204A87
--term 5 $FF79C6
+-term 5 $BD93F9
 -term 6 $66D9EF
 -term 7 $F8F8F2
--term 8 $FFFFFF
--term 9 $8B080B
+-term 8 $F8F8F0
+-term 9 $666666
 -term 10 $50FA7B
 -term 11 $F1FA8C
 -term 12 $6272A4

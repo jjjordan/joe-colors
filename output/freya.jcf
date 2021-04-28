@@ -14,17 +14,17 @@
 
 -term 0 235
 -term 1 88
--term 2 150
--term 3 150
+-term 2 28
+-term 3 144
 -term 4 20
--term 5 20
+-term 5 242
 -term 6 30
 -term 7 253
--term 8 231
+-term 8 246
 -term 9 203
 -term 10 150
--term 11 150
--term 12 20
+-term 11 179
+-term 12 18
 -term 13 182
 -term 14 151
 -term 15 231
@@ -58,17 +58,17 @@
 
 -term 0 $2A2A2A
 -term 1 $8B0000
--term 2 $AFE091
+-term 2 $008B00
 -term 3 $C2B680
 -term 4 $0000CD
--term 5 $0000CD
+-term 5 $3F3F3F
 -term 6 $008B8B
 -term 7 $DCDCCC
 -term 8 $F7F7F1
 -term 9 $F07070
 -term 10 $AFE091
--term 11 $AFE091
--term 12 $0000CD
+-term 11 $D4B064
+-term 12 $00008B
 -term 13 $C2AED0
 -term 14 $AED0AE
 -term 15 $FFFFFF

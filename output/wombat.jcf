@@ -52,19 +52,19 @@
 -cursor $242424/$656565
 
 -term 0 $242424
--term 1 $E5786D
--term 2 $95E454
--term 3 $CAE682
+-term 1 $343434
+-term 2 $99968B
+-term 3 $857B6F
 -term 4 $384048
--term 5 $A0A8B0
--term 6 $8AC6F2
+-term 5 $656565
+-term 6 $8F8F8F
 -term 7 $F6F3E8
--term 8 $E7F6DA
+-term 8 $A0A8B0
 -term 9 $E5786D
 -term 10 $95E454
 -term 11 $CAE682
--term 12 $384048
--term 13 $A0A8B0
+-term 12 $444444
+-term 13 $808080
 -term 14 $8AC6F2
 -term 15 $E7F6DA
 

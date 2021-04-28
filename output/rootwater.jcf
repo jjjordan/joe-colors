@@ -11,19 +11,19 @@
 -cursor 22/114
 
 -term 0 234
--term 1 196
+-term 1 235
 -term 2 71
--term 3 214
--term 4 240
--term 5 242
--term 6 123
+-term 3 22
+-term 4 16
+-term 5 240
+-term 6 65
 -term 7 250
--term 8 231
+-term 8 217
 -term 9 196
 -term 10 114
--term 11 114
--term 12 242
--term 13 217
+-term 11 214
+-term 12 236
+-term 13 242
 -term 14 123
 -term 15 231
 
@@ -58,19 +58,19 @@
 -cursor $3a553a/$77dd88
 
 -term 0 $151B1D
--term 1 $FF0000
--term 2 $77DD88
--term 3 $77DD88
--term 4 $607075
--term 5 $607075
--term 6 $8FFFFF
+-term 1 $656565
+-term 2 $55AF66
+-term 3 $FFAA33
+-term 4 $2C3032
+-term 5 $4F5B5D
+-term 6 $448844
 -term 7 $BABDB6
--term 8 $FFFFFF
+-term 8 $BEBEBE
 -term 9 $FF0000
--term 10 $88EE99
+-term 10 $77DD88
 -term 11 $88EE99
 -term 12 $607075
--term 13 $607075
+-term 13 $FFC0CB
 -term 14 $8FFFFF
 -term 15 $FFFFFF
 

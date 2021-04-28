@@ -13,8 +13,8 @@
 -cursor 231/33
 
 -term 0 16
--term 1 196
--term 2 46
+-term 1 88
+-term 2 29
 -term 3 184
 -term 4 20
 -term 5 91
@@ -23,10 +23,10 @@
 -term 8 243
 -term 9 196
 -term 10 46
--term 11 184
+-term 11 230
 -term 12 63
 -term 13 132
--term 14 254
+-term 14 250
 -term 15 255
 
 =Idle
@@ -67,20 +67,20 @@
 -cursor $ffffff/$0080f0
 
 -term 0 $000000
--term 1 $FF0000
--term 2 $00FF00
+-term 1 $FF3030
+-term 2 $00884C
 -term 3 $E0E040
 -term 4 $0000FF
--term 5 $B64F90
+-term 5 $8040F0
 -term 6 $0090A0
 -term 7 $E5E5E5
 -term 8 $707070
 -term 9 $FF0000
 -term 10 $00FF00
--term 11 $E0E040
+-term 11 $FFF0D0
 -term 12 $7050FF
 -term 13 $B64F90
--term 14 $E5E5E5
+-term 14 $E7E7E7
 -term 15 $F8F8F8
 
 =Idle

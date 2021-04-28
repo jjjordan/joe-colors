@@ -1,1 +1,2 @@
 colormath
+munkres==1.1.4

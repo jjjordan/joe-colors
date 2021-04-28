@@ -14,7 +14,7 @@
 -term 0 16
 -term 1 131
 -term 2 48
--term 3 220
+-term 3 179
 -term 4 54
 -term 5 135
 -term 6 30
@@ -24,8 +24,8 @@
 -term 10 120
 -term 11 220
 -term 12 61
--term 13 135
--term 14 255
+-term 13 213
+-term 14 252
 -term 15 231
 
 =Idle
@@ -68,10 +68,10 @@
 -term 8 $EEEEEE
 -term 9 $CE4E4E
 -term 10 $8FFF8B
--term 11 $FFCD00
+-term 11 $FFFFCD
 -term 12 $6E6EAF
--term 13 $AB60ED
--term 14 $EEEEEE
+-term 13 $FF8BFF
+-term 14 $CFCFCD
 -term 15 $FFFFFF
 
 =Idle
